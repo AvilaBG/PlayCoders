@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>PLAYCODERS · Software a medida</title>
+  <meta name="description" content="PLAYCODERS desarrolla apps, sitios web y sistemas a medida para que tu empresa trabaje mejor. Pedí tu presupuesto sin compromiso.">
+  <meta name="theme-color" content="#0B0A0E" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#F6F5F8" media="(prefers-color-scheme: light)">
+  <script>
+    // Apply saved theme before paint to avoid a flash.
+    try { var t = localStorage.getItem('pc-theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Icon sprite (Lucide-style strokes) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-phone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></symbol>
+      <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20M2 12h20"/></symbol>
+      <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5M3 12a9 3 0 0 0 18 0"/></symbol>
+      <symbol id="i-zap" viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></symbol>
+      <symbol id="i-layout" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18M9 21V9"/></symbol>
+      <symbol id="i-buoy" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="m4.93 4.93 4.24 4.24m5.66 0 4.24-4.24m-4.24 9.9 4.24 4.24m-9.9-4.24-4.24 4.24"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+      <symbol id="i-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M9.5 9.2c.3 1.7 1.6 3.6 3.6 4.7l1-1 1.6.7c0 .9-.7 1.6-1.6 1.6-2.9 0-5.8-2.9-5.8-5.8 0-.9.7-1.6 1.6-1.6l.7 1.6-1 .8"/></symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+      <!-- Brand "A": open apex with the teal triangle -->
+      <symbol id="logo-a" viewBox="0 0 100 100"><path fill="currentColor" d="M0 100 41 0h18l41 100H80L50 27 20 100Z"/><path fill="var(--brand)" d="M36 70h28L50 100Z"/></symbol>
+      <symbol id="logo-e" viewBox="0 0 80 100"><path fill="currentColor" d="M0 0h80v18H0zM8 41h72v18H8zM0 82h80v18H0z"/></symbol>
+    </defs>
+  </svg>
+
+  <a class="skip" href="#main">Saltar al contenido</a>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo" aria-label="PLAYCODERS, ir al inicio">
+        <span aria-hidden="true">PL<svg class="logo__a"><use href="#logo-a"/></svg>YCOD<svg class="logo__e"><use href="#logo-e"/></svg>RS</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#proceso">Cómo trabajamos</a>
+        <a href="#porque">Por qué nosotros</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#contacto" class="btn btn--primary nav__cta">Pedí tu presupuesto</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Cambiar a tema claro">
+          <svg class="ico ico--sun"><use href="#i-sun"/></svg>
+          <svg class="ico ico--moon"><use href="#i-moon"/></svg>
+        </button>
+        <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+          <svg class="ico ico--menu"><use href="#i-menu"/></svg>
+          <svg class="ico ico--x"><use href="#i-x"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+      <canvas class="hero__net" id="net" aria-hidden="true"></canvas>
+      <div class="grid-bg" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+        <p class="eyebrow reveal"><span class="pulse"></span> Desarrollo de software a medida</p>
+        <h1 class="hero__title reveal">
+          Convertimos tus ideas en
+          <span class="rotator" aria-hidden="true"><span class="rotator__word" id="rotator">tu app</span></span>
+          <span class="sr-only">apps, sitios web y sistemas a medida</span>
+        </h1>
+        <p class="hero__lead reveal">
+          Diseñamos y desarrollamos aplicaciones, sitios web y sistemas propios que automatizan tareas, ordenan tu operación y hacen crecer tu empresa. Vos nos contás qué necesitás; nosotros lo hacemos realidad.
+        </p>
+        <div class="hero__ctas reveal">
+          <a href="#contacto" class="btn btn--primary btn--lg">Pedí tu presupuesto <svg class="ico"><use href="#i-arrow"/></svg></a>
+          <a href="#servicios" class="btn btn--ghost btn--lg">Ver servicios</a>
+        </div>
+
+        <ul class="hero__chips reveal" aria-label="Lo que incluye">
+          <li><svg class="ico"><use href="#i-check"/></svg> Presupuesto sin cargo</li>
+          <li><svg class="ico"><use href="#i-check"/></svg> Respuesta en 24 h</li>
+          <li><svg class="ico"><use href="#i-check"/></svg> Soporte post-lanzamiento</li>
+        </ul>
+
+        <!-- Code window -->
+        <div class="code reveal" aria-hidden="true">
+          <div class="code__bar"><i></i><i></i><i></i><span>tu-proyecto.ts</span></div>
+<pre class="code__body"><code><span class="k">const</span> <span class="v">proyecto</span> = <span class="f">playcoders</span>.<span class="f">crear</span>({
+  <span class="p">tipo</span>: <span class="s" id="codeType">'app'</span>,
+  <span class="p">diseño</span>: <span class="s">'a medida'</span>,
+  <span class="p">objetivo</span>: <span class="s">'más ventas, menos tareas'</span>,
+});
+
+<span class="k">await</span> <span class="v">proyecto</span>.<span class="f">lanzar</span>(); <span class="c">// listo para crecer</span><span class="caret"></span></code></pre>
+        </div>
+      </div>
+
+      <a href="#marquee" class="scroll-hint" aria-label="Seguir bajando"><span></span></a>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" id="marquee" aria-label="Tecnologías con las que trabajamos">
+      <div class="marquee__track">
+        <ul>
+          <li>React</li><li>Next.js</li><li>Node.js</li><li>Flutter</li><li>React Native</li><li>TypeScript</li><li>Python</li><li>PostgreSQL</li><li>Firebase</li><li>AWS</li><li>Docker</li><li>APIs REST</li>
+        </ul>
+        <ul aria-hidden="true">
+          <li>React</li><li>Next.js</li><li>Node.js</li><li>Flutter</li><li>React Native</li><li>TypeScript</li><li>Python</li><li>PostgreSQL</li><li>Firebase</li><li>AWS</li><li>Docker</li><li>APIs REST</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- SERVICES -->
+    <section class="section" id="servicios">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="kicker">// Servicios</p>
+          <h2>Todo lo que tu empresa necesita, <span class="grad">hecho a medida</span></h2>
+          <p class="section__lead">Nada de plantillas genéricas. Construimos soluciones pensadas para tu forma de trabajar, tus clientes y tus objetivos.</p>
+        </header>
+
+        <div class="bento">
+          <article class="card card--xl reveal">
+            <div class="card__icon"><svg class="ico"><use href="#i-phone"/></svg></div>
+            <h3>Apps móviles</h3>
+            <p>Aplicaciones para iOS y Android rápidas, intuitivas y listas para publicarse en las tiendas. Desde una app para tus clientes hasta una herramienta interna para tu equipo.</p>
+            <ul class="tags"><li>iOS</li><li>Android</li><li>Multiplataforma</li></ul>
+            <div class="phone" aria-hidden="true">
+              <div class="phone__notch"></div>
+              <div class="phone__row w70"></div>
+              <div class="phone__card"></div>
+              <div class="phone__row w90"></div>
+              <div class="phone__row w50"></div>
+              <div class="phone__btn"></div>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon"><svg class="ico"><use href="#i-globe"/></svg></div>
+            <h3>Sitios y tiendas web</h3>
+            <p>Webs institucionales, landing pages y e-commerce modernos, veloces y optimizados para Google y para el celular.</p>
+            <div class="viz viz--web" aria-hidden="true"><div class="browser"><div class="browser__bar"><i></i><i></i><i></i><span></span></div><div class="browser__body"><div class="browser__hero"></div><div class="browser__tiles"><span></span><span></span><span></span></div></div></div></div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon"><svg class="ico"><use href="#i-db"/></svg></div>
+            <h3>Sistemas de gestión</h3>
+            <p>Software propio para stock, ventas, turnos, clientes o lo que tu operación necesite. Todo en un solo lugar.</p>
+            <div class="viz viz--bars" aria-hidden="true"><span style="--h:45%"></span><span style="--h:70%"></span><span style="--h:55%"></span><span style="--h:85%"></span><span style="--h:65%"></span><span style="--h:95%"></span></div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon"><svg class="ico"><use href="#i-zap"/></svg></div>
+            <h3>Automatización e integraciones</h3>
+            <p>Conectamos tus herramientas y eliminamos tareas repetitivas para que tu equipo se enfoque en lo importante.</p>
+            <div class="viz viz--flow" aria-hidden="true"><span class="node"><svg class="ico"><use href="#i-db"/></svg></span><span class="wire"><i></i></span><span class="node"><svg class="ico"><use href="#i-zap"/></svg></span><span class="wire"><i></i></span><span class="node"><svg class="ico"><use href="#i-check"/></svg></span></div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon"><svg class="ico"><use href="#i-layout"/></svg></div>
+            <h3>Diseño UX/UI</h3>
+            <p>Interfaces claras y atractivas que tus usuarios entienden al instante y disfrutan usar.</p>
+            <div class="viz viz--ui" aria-hidden="true"><div class="wf"><span class="wf__img"></span><div class="wf__lines"><span class="w90"></span><span class="w70"></span><span class="wf__btn"></span></div></div><svg class="cursor" viewBox="0 0 24 24"><path d="M4 2l16 9-7 2-3 7z"/></svg></div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon"><svg class="ico"><use href="#i-buoy"/></svg></div>
+            <h3>Soporte y evolución</h3>
+            <p>No desaparecemos al entregar: mantenemos, mejoramos y hacemos crecer tu producto junto a vos.</p>
+            <div class="viz viz--pulse" aria-hidden="true"><svg viewBox="0 0 200 60" preserveAspectRatio="none"><path class="beat" pathLength="100" d="M0 30h50l10-18 12 36 10-28 8 10h110"/></svg><span class="status"><i></i>Sistema activo</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section section--alt" id="proceso">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="kicker">// Cómo trabajamos</p>
+          <h2>De la idea al lanzamiento, <span class="grad">sin vueltas</span></h2>
+          <p class="section__lead">Un proceso simple y transparente. Sabés en todo momento en qué etapa está tu proyecto.</p>
+        </header>
+
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step__num">01</span>
+            <h3>Te escuchamos</h3>
+            <p>Charlamos sobre tu negocio, tus objetivos y lo que querés lograr. Sin tecnicismos.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">02</span>
+            <h3>Diseñamos la solución</h3>
+            <p>Te presentamos una propuesta clara con alcance, tiempos y presupuesto cerrado.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">03</span>
+            <h3>Desarrollamos</h3>
+            <p>Construimos por etapas y te mostramos avances reales para que opines en cada paso.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">04</span>
+            <h3>Lanzamos y acompañamos</h3>
+            <p>Publicamos tu proyecto y seguimos a tu lado con soporte y mejoras continuas.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- WHY US -->
+    <section class="section" id="porque">
+      <div class="container why">
+        <div class="why__text">
+          <header class="section__head section__head--left reveal">
+            <p class="kicker">// Por qué PLAYCODERS</p>
+            <h2>Tecnología seria, <span class="grad">trato cercano</span></h2>
+            <p class="section__lead">Combinamos la experiencia técnica de un equipo profesional con la cercanía de quien entiende tu día a día.</p>
+          </header>
+          <ul class="why__list">
+            <li class="reveal"><svg class="ico"><use href="#i-check"/></svg><div><strong>100% a medida.</strong> Cada línea de código está pensada para tu negocio.</div></li>
+            <li class="reveal"><svg class="ico"><use href="#i-check"/></svg><div><strong>Precios claros.</strong> Presupuesto cerrado, sin sorpresas al final.</div></li>
+            <li class="reveal"><svg class="ico"><use href="#i-check"/></svg><div><strong>Comunicación directa.</strong> Hablás con quienes desarrollan tu proyecto.</div></li>
+            <li class="reveal"><svg class="ico"><use href="#i-check"/></svg><div><strong>Escalable.</strong> Tu software crece al mismo ritmo que tu empresa.</div></li>
+          </ul>
+        </div>
+
+        <div class="stats">
+          <div class="stat reveal"><span class="stat__num" data-count="100" data-suffix="%">0</span><span class="stat__label">Desarrollo a medida</span></div>
+          <div class="stat reveal"><span class="stat__num" data-count="24" data-suffix=" h">0</span><span class="stat__label">Para responder tu consulta</span></div>
+          <div class="stat reveal"><span class="stat__num" data-count="0" data-prefix="$">0</span><span class="stat__label">Costo del presupuesto</span></div>
+          <div class="stat reveal"><span class="stat__num" data-count="365" data-suffix=" días">0</span><span class="stat__label">De soporte y mejoras</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BAND -->
+    <section class="cta-band">
+      <div class="container">
+        <div class="cta-band__box reveal">
+          <h2>¿Tenés una idea? <span class="grad">Hagámosla realidad.</span></h2>
+          <p>Contanos tu proyecto y te enviamos una propuesta sin compromiso.</p>
+          <a href="#contacto" class="btn btn--primary btn--lg">Empezar ahora <svg class="ico"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contacto">
+      <div class="container contact">
+        <div class="contact__info">
+          <header class="section__head section__head--left reveal">
+            <p class="kicker">// Contacto</p>
+            <h2>Pedí tu <span class="grad">presupuesto</span></h2>
+            <p class="section__lead">Escribinos por WhatsApp para una respuesta rápida o completá el formulario y te contactamos por email.</p>
+          </header>
+
+          <a class="wa-card reveal" href="https://wa.me/5553999661614?text=Hola%20PLAYCODERS%2C%20quiero%20pedir%20un%20presupuesto." target="_blank" rel="noopener">
+            <span class="wa-card__icon"><svg class="ico"><use href="#i-chat"/></svg></span>
+            <span class="wa-card__text"><strong>Chateá por WhatsApp</strong><span>Respuesta rápida</span></span>
+            <svg class="ico wa-card__arrow"><use href="#i-arrow"/></svg>
+          </a>
+
+          <ul class="contact__meta reveal">
+            <li><svg class="ico"><use href="#i-mail"/></svg><span>Respondemos tu email en menos de 24 h</span></li>
+            <li><svg class="ico"><use href="#i-clock"/></svg><span>Lunes a viernes · 9 a 18 h</span></li>
+          </ul>
+        </div>
+
+        <form class="form reveal" id="contactForm" novalidate>
+          <div class="field">
+            <label for="f-name">Nombre</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required placeholder="Tu nombre">
+            <p class="field__error" id="e-name">Ingresá tu nombre.</p>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="f-email">Email</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required placeholder="vos@empresa.com">
+              <p class="field__error" id="e-email">Ingresá un email válido.</p>
+            </div>
+            <div class="field">
+              <label for="f-phone">Teléfono <span class="opt">(opcional)</span></label>
+              <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+54 9 ...">
+            </div>
+          </div>
+
+          <fieldset class="field">
+            <legend>¿Qué necesitás?</legend>
+            <div class="chips">
+              <label class="chip"><input type="radio" name="type" value="App móvil" checked><span>App móvil</span></label>
+              <label class="chip"><input type="radio" name="type" value="Sitio web"><span>Sitio web</span></label>
+              <label class="chip"><input type="radio" name="type" value="Sistema a medida"><span>Sistema</span></label>
+              <label class="chip"><input type="radio" name="type" value="Otro"><span>Otro</span></label>
+            </div>
+          </fieldset>
+
+          <div class="field">
+            <label for="f-msg">Contanos tu idea</label>
+            <textarea id="f-msg" name="message" rows="4" required placeholder="Qué querés lograr, plazos estimados, referencias…"></textarea>
+            <p class="field__error" id="e-msg">Contanos brevemente tu proyecto.</p>
+          </div>
+
+          <div class="form__actions">
+            <button type="submit" class="btn btn--primary btn--lg" data-via="mail"><svg class="ico"><use href="#i-mail"/></svg> Enviar por email</button>
+            <button type="submit" class="btn btn--wa btn--lg" data-via="wa"><svg class="ico"><use href="#i-chat"/></svg> Enviar por WhatsApp</button>
+          </div>
+          <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#inicio" class="logo logo--sm" aria-label="PLAYCODERS, volver arriba">
+        <span aria-hidden="true">PL<svg class="logo__a"><use href="#logo-a"/></svg>YCOD<svg class="logo__e"><use href="#logo-e"/></svg>RS</span>
+      </a>
+      <p>Software a medida para empresas que quieren crecer.</p>
+      <p class="footer__copy">© <span id="year">2026</span> PLAYCODERS. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <a class="fab" href="https://wa.me/5553999661614?text=Hola%20PLAYCODERS%2C%20quiero%20pedir%20un%20presupuesto." target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+    <svg class="ico"><use href="#i-chat"/></svg>
+  </a>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
